@@ -123,7 +123,6 @@ function get_log() {
                 setTimeout(get_log, poll);
             } else {
                 throw "Unknown AJAX Error (status " + xhr.status + ")";
-                location.reload();
             }
         }
     });
@@ -163,10 +162,12 @@ function show_log() {
 function error(what) {
     kill = true;
 
-    $(dataelem).text("An error occured :-(.\r\n" +
+    $(dataelem).text("An error occurred :-(.\r\n" +
                      "Reloading may help; no promises.\r\n" + 
                      what);
     scroll(0);
+    console.log("I got here");
+    location.reload();
 
     return false;
 }
