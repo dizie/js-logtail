@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 #header {
     background-color: #051414;
@@ -20,4 +21,8 @@ body {
 
 #data {
     margin-left: 10px;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
 }
